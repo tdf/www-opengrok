@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cd /usr/local/share/opengrok/bin
+export OPENGROK_TOMCAT_BASE=/srv/tomcat6
+export EXUBERANT_CTAGS=/usr/bin/ctags
+
+./OpenGrok $@
+
+if [ "$1" == "deploy" ]; then
+  cd $OPENGROK_TOMCAT_BASE/webapps
+  mv source.war ROOT.war
+fi

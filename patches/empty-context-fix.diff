@@ -1,0 +1,48 @@
+diff -u a/web/enoent.jsp b/web/enoent.jsp
+--- a/web/enoent.jsp	2010-05-11 10:10:08.000000000 +0200
++++ b/web/enoent.jsp	2010-10-08 14:58:33.000000000 +0200
+@@ -49,7 +49,7 @@
+         <%@ include file="pageheader.jspf" %>
+     </div>
+ <div id="Masthead"></div>
+-<div id="bar"><a id="home" href="<%=context%>">Home</a> | <input id="search" name="q" class="q"/> <input type="submit" value="Search" class="submit"/> </div>
++<div id="bar"><a id="home" href="<%=context%>/">Home</a> | <input id="search" name="q" class="q"/> <input type="submit" value="Search" class="submit"/> </div>
+ <h3 class="error">Error 404: File not found!</h3>
+ The requested resource is not available. <%=configError%>
+ <div style="display:block;height:10em">&nbsp;</div><%@include file="foot.jspf"%>
+diff -u a/web/error.jsp b/web/error.jsp
+--- a/web/error.jsp	2010-05-11 10:10:08.000000000 +0200
++++ b/web/error.jsp	2010-10-08 14:58:56.000000000 +0200
+@@ -45,7 +45,7 @@
+       <%@ include file="pageheader.jspf" %>
+     </div>
+ <div id="Masthead"></div>
+-<div id="bar"><a id="home" href="<%=context%>">Home</a> | <input id="search" name="q" class="q"/> <input type="submit" value="Search" class="submit"/> </div>
++<div id="bar"><a id="home" href="<%=context%>/">Home</a> | <input id="search" name="q" class="q"/> <input type="submit" value="Search" class="submit"/> </div>
+ <h3 class="error">There was an error!</h3>
+ <p><%=configError%>
+ </p><pre><%
+diff -u a/web/mast.jsp b/web/mast.jsp
+--- a/web/mast.jsp	2010-05-11 10:10:08.000000000 +0200
++++ b/web/mast.jsp	2010-10-08 14:59:53.000000000 +0200
+@@ -167,7 +167,7 @@
+         <div id="pagetitle"><b id="filename">Cross Reference: <%=basename%></b><% if (dtag!=null & dtag!="") { %><br/><%=dtag%><% } %></div>
+     </div>
+     <div id="Masthead"><tt><a href="<%=context%>/xref/">xref</a>: <%=org.opensolaris.opengrok.web.Util.breadcrumbPath(context + "/xref", path)%></tt></div>
+-    <div id="bar"><a href="<%=context%>" id="home">Home</a> |
++    <div id="bar"><a href="<%=context%>/" id="home">Home</a> |
+         <%
+         
+         if (noHistory || servlet.startsWith("/hi")) {
+diff -u a/web/search.jsp b/web/search.jsp
+--- a/web/search.jsp	2010-05-11 10:10:08.000000000 +0200
++++ b/web/search.jsp	2010-10-08 15:00:13.000000000 +0200
+@@ -274,7 +274,7 @@
+     <div id="header"><%@ include file="pageheader.jspf" %></div>
+ <div id="Masthead"></div>
+ <div id="bar">
+-    <table border="0" width="100%"><tr><td><a href="<%=context%>" id="home">Home</a></td><td align="right"><%
++    <table border="0" width="100%"><tr><td><a href="<%=context%>/" id="home">Home</a></td><td align="right"><%
+      {
+         String url = "search?";
+                 url = url + (q == null ? "" : "&amp;q=" + Util.URIEncode(q)) +

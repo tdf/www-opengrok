@@ -1,0 +1,12 @@
+diff -ur a/web/history.jsp b/web/history.jsp
+--- a/web/history.jsp	2010-05-11 10:10:08.000000000 +0200
++++ b/web/history.jsp	2011-02-17 16:37:54.000000000 +0100
+@@ -173,7 +173,7 @@
+ %>&nbsp;</td><td><%
+ String cout=Util.htmlize(entry.getMessage());
+ if (bugPage != null && ! bugPage.equals("")){
+-        cout=bugPattern.matcher(cout).replaceAll("<a href=\"" + bugPage + "$1\">$1</a>"); }
++        cout=bugPattern.matcher(cout).replaceAll("<a href=\"" + bugPage + "$1\">$0</a>"); }
+ if (reviewPage != null && ! reviewPage.equals("")) {
+     cout=reviewPattern.matcher(cout).replaceAll("<a href=\"" + reviewPage + "$1\">$1</a>"); }
+ 	%><%= cout  %>

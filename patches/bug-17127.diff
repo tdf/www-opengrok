@@ -1,0 +1,11 @@
+diff -r aa6f8f87e5f3 -r d48bc6f573d5 web/search.jsp
+--- a/web/search.jsp	Fri Sep 24 13:05:26 2010 +0200
++++ b/web/search.jsp	Tue Sep 28 10:11:31 2010 +0200
+@@ -399,6 +399,7 @@
+                             %></p><%                          
+                         }
+                         spellDirectory.close();
++                        checker.close();
+                  }
+ 
+                 }

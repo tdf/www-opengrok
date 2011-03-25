@@ -1,0 +1,37 @@
+#!/bin/sh
+
+INSTALL=`pwd`/`dirname $0`/..
+
+PATCHES_DIR=$INSTALL/patches
+WAR=$INSTALL/lib/source.war
+
+TMP_DIR=/tmp/opengrok-war
+
+echo "Uncompressing war..."
+mkdir $TMP_DIR
+unzip -q $WAR.orig -d $TMP_DIR
+
+cd $TMP_DIR
+for p in `ls $PATCHES_DIR`; do
+	if [ -f $PATCHES_DIR/$p ]; then
+		patch -s -p2 -l --fuzz=0 --dry-run <$PATCHES_DIR/$p
+		if [ "$?" != "0" ]; then
+			echo "ERROR: patch -p2 -l --fuzz=0 --dry-run <$PATCHES_DIR/$p"
+			patch -p2 -l --fuzz=0 --dry-run <$PATCHES_DIR/$p
+			exit 1
+		fi
+		echo "APPLY $p"
+		patch -p2 -l -s --fuzz=0 <$PATCHES_DIR/$p
+	fi
+done
+
+#add things inside the toadd folder
+cp -r $PATCHES_DIR/toadd/* .
+
+echo "Updating war..."
+if [ -e $WAR ]; then
+	rm $WAR
+fi
+zip -q -r $WAR *
+
+rm -r $TMP_DIR

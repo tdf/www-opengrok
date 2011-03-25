@@ -1,0 +1,12 @@
+Requirements
+ * Tomcat
+
+Install OpenGrok
+
+ * Clone this branch of the website git repository into /usr/local/share/opengrok
+ * Copy the bin/opengrok into the PATH, eg: /usr/local/bin and adapt the path to
+   the data and tomcat locations.
+ * Copy the bin/update-opengrok into the $HOME/bin of the user running opengrok
+ * Copy the opengrok-config.xml file in the home of the user running opengrok
+
+

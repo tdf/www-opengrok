@@ -1,0 +1,18 @@
+--- a/web/projects.jspf	2010-10-08 10:01:07.202553872 +0200
++++ b/web/projects.jspf	2010-10-08 14:16:37.494001297 +0200
+@@ -70,6 +70,15 @@
+     Project defaultProject = env.getDefaultProject();
+     if (defaultProject != null && project.isEmpty()) {
+        project.add(defaultProject.getDescription());
++    } else if ( project.isEmpty()) {
++        // Make all projects default instead of none
++        for (Project p : projects) {
++            if ( !p.getPath().endsWith( "/l10n" ) &&
++                 !p.getPath().endsWith( "/help" ) &&
++                 !p.getPath().endsWith( "/testing" ) ) {
++                project.add(p.getDescription());
++            }
++        }
+     }
+ 
+     //only save found projects into cookies

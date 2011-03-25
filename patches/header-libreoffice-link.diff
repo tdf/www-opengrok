@@ -1,0 +1,11 @@
+diff -ru a/web/pageheader.jspf b/web/pageheader.jspf
+--- a/web/pageheader.jspf	2010-05-11 10:10:08.000000000 +0200
++++ b/web/pageheader.jspf	2011-02-17 13:09:42.000000000 +0100
+@@ -20,6 +20,4 @@
+ Use is subject to license terms.
+ 
+ --%>
+-<% String home = request.getContextPath();
+-%>
+-<a href="<%=home%>"><div id="MastheadLogo"><h1> OpenGrok </h1></div></a>
++<a href="http://www.libreoffice.org"><div id="MastheadLogo"><h1> LibreOffice </h1></div></a>

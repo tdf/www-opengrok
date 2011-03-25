@@ -1,0 +1,217 @@
+
+body {
+  background:#FFFFFF url(img/background-page.png) repeat-x scroll 0 0;
+  color: black;
+  font-family: arial, sans-serif;
+  margin: 0;
+}
+
+#page {
+  margin: auto;
+  width: 900px;
+}
+
+#Masthead {
+	background: none;
+	border: none;
+	display:block;
+    background-image: url(img/header.png);
+    background-position:0 bottom;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 15px;
+}
+#header {
+  background-image: url(img/header.png);
+  padding-left: 5px;
+  padding-right: 5px;
+  height:88px;
+  display: block;
+/*width: 98%;*/
+}
+
+#content {
+  position:absolute;    
+  bottom:0px;
+  left:0px;
+  right:0px;
+  padding-left: 1em;
+  padding-top:7px;
+  overflow:auto;
+  top:150px;
+  }
+
+#whole_header {  
+  height:6em;
+  top:0;
+  right:0px;
+  left:0px;
+  }
+
+#MastheadLogo h1 {
+	display: none;
+}
+
+#MastheadLogo {
+    background:transparent url(img/libreoffice-logo.png) no-repeat scroll 18px 20px;
+	height: 45px;
+	width: 218px;
+    padding:18px 20px;
+}
+
+#pagetitle {
+	font-size: large;
+	color:#5382a1;
+	text-align:right;
+	position: relative;
+	top: -20px;
+	right: 0.5em;
+}
+
+#filename {
+	font-size: x-large;
+	color:#000;
+	text-align:right;
+}
+
+#menu {
+  margin-left: 5em;
+}
+
+#bar {
+	padding-left: 0.5em;
+	margin-bottom:0.2em;
+}
+
+input.q {
+	background-color: #ffffff;
+	color: #000;
+	border-left: 1px solid #bbbbff;
+	border-top: 1px solid #bbbbff;
+	border-right: 1px solid #93a8bb;
+	border-bottom: 1px solid #93a8bb;
+	font-weight: normal;
+	padding:2px;
+}
+
+input.submit {
+	background-color: #43c330;
+	color: #fff;
+	padding: 0px;
+	border-left: 1px solid #92e285;
+	border-top: 1px solid #92e285;
+	border-right: 1px solid #106802;
+	border-bottom: 1px solid #106802;
+	font-weight: bold;
+	min-width:4em;
+	text-align:center;
+}
+
+input.submit:hover, input.submit:active {
+	background-color: #106802;
+	color: #fff;
+	padding: 0px;
+	border-left: 1px solid #92e285;
+	border-top: 1px solid #92e285;
+	border-right: 1px solid #106802;
+	border-bottom: 1px solid #106802;
+	font-weight: bold;
+	min-width:4em;
+	text-align:center;
+}
+
+.thead {
+	background-color:#C5D5A9;
+	font-weight:bold;
+}
+
+.alt {
+	background-color:#e8e8f0;
+}
+
+#results a			                {color:#1C99E0;text-decoration:none;}
+#results a:visited		            {color:#023f62;text-decoration:none;}
+#results a:active, #results a:hover	{color:#0369a3;text-decoration:underline;}
+
+#results tr.dir a			                {color:#18A303;text-decoration:none;}
+#results tr.dir a:visited		            {color:#106802;text-decoration:none;}
+#results tr.dir a:active, #results a:hover	{color:#18A303;text-decoration:underline;}
+
+a			{color:#18a303;text-decoration:none;}
+a:visited		{color:#105802;text-decoration:none;}
+a:active, a:hover	{color:#106802;text-decoration:underline;}
+img {border:0;}
+tt {margin:0;}
+form, pre {padding:0px;margin:0px;}
+
+#src .l  {color:#888;background-color:#ddd;padding-right:.1em;margin-right:.2em;text-align:right;}
+#src .hl {color:#000;background-color:#ddd;padding-right:.1em;margin-right:.2em;text-align:right;}
+#src .l-hide  {display: none}
+#src .hl-hide {display: none}
+#src tt{padding-left:1em; padding-right:1em;}
+
+.sl {color:#999;text-decoration:underline;}
+td.a{color:#000}
+.n  {color:brown;} /* numbers */
+.s  {color:green;} /* strings */
+.c  {color:#666;} /* comments */
+.b  {color:#000; font-weight:bold;} /* comments */
+.k  {color:#000; font-family:monospace;} /* comments */
+a.d {color:#909; font-weight:bold; font-style:italic;text-decoration:none;} /* definitions */
+a.s {color:#000;}  /* matched lines */
+a.f {color:#909;} /* file locals */
+div.a {color:#000}
+a.h {font-size:small; margin-left:2em;}
+
+#results {margin-top:.5em;}
+#results .con{font-size:small;color:#000;}
+#more .l, #results .l { color:#666; }
+#results .m {background-color:#ffb;}
+#results i {color: green; font-weight:bold;}
+#results tr.dir td {
+  background:transparent url(img/heading-green.png) repeat-x scroll 0 bottom;
+  border-bottom:1px solid #92E285;
+  font-weight: 600;
+}
+#results td.f{width:3em;padding-left:2em;padding-right:.5em;}
+
+#more { line-height:1.25em;}
+#more b { background-color:#ffff99;}
+
+#diffbar {border-bottom: 2px solid #c5d5a9; padding-left:2em;font-size:medium; }
+#difftable {border:#C5D5A9; border-collapse:collapse;font-size:small;}
+span.tab { padding: 5px; padding-top:3px; padding-bottom: 0px;  margin-left: 2px; margin-right: 2px; margin-bottom:0px ;background-color:#eee; border:2px solid #c5d5a9;border-bottom:2px none #eee;}
+span.tabsel {  padding: 6px ; padding-top:5px; padding-bottom: 1px; margin-left: 2px; margin-right: 2px; background-color:#fff; border:2px solid #c5d5a9; border-bottom:2px solid #fff;}
+#difftable .d { background-color:#FFCC40;}
+#difftable .a { background-color:#8BD98B;}
+tr.k{border-bottom:1px dashed #ccc;}
+#difftable i  {color:#666;background-color:#ddd;margin-right:.2em;padding-left:1em;padding-right:.5em;text-decoration:none; font-weight:normal;}
+#difftable i.a  {background-color:#FFDD80;color:#666;}
+strike.d{background-color:#bbddbb; margin-right:.2em;padding-left:1em;padding-right:.5em;}
+#difftable td.d { background-color:#eeeeee;}
+.grey{background-color:#eee;}
+
+#badge { padding:3px; }
+
+.rssbadge { padding:3px; text-align:right; border:0px;}
+
+#Footer {
+	background-color: white;
+	color: #777;
+	font-size: 95%;
+	margin-top: 1em;
+}
+#Footer p {
+	margin: 0.6em 0 1em 0;
+	text-align:center;
+}
+#Footer a {
+	color: #555;
+}
+
+.more {background-color:#fff;border: 1px #ccc solid;padding:.3em;margin:1px;}
+.sel {background-color:#63bbee;border: 1px #0369a3 solid; color: #0369a3; padding:.3em;margin:1px;}
+.error {color: brown;}
+
+span.blame { }
+span.blame-hidden { display: none }
