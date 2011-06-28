@@ -12,7 +12,7 @@ diff -ur a/web/menu.jspf b/web/menu.jspf
 -         if ( $(this).attr("selected") ) { $(this).removeAttr("selected") }
 -         else { $(this).attr("selected","true"); }
 +         var value = $(this).attr("value");
-+         if ( value == 'translation' || value == 'l10n' || value == 'testing' || value == 'help' ) {
++         if ( value == 'translations' || value == 'l10n' || value == 'testing' || value == 'help' ) {
 +             $(this).removeAttr("selected") 
 +         }
       }
