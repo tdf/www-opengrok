@@ -1,6 +1,6 @@
 --- a/web/projects.jspf	2010-10-08 10:01:07.202553872 +0200
 +++ b/web/projects.jspf	2010-10-08 14:16:37.494001297 +0200
-@@ -70,6 +70,15 @@
+@@ -70,6 +70,16 @@
      Project defaultProject = env.getDefaultProject();
      if (defaultProject != null && project.isEmpty()) {
         project.add(defaultProject.getDescription());
