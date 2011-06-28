@@ -8,6 +8,7 @@
 +        // Make all projects default instead of none
 +        for (Project p : projects) {
 +            if ( !p.getPath().endsWith( "/l10n" ) &&
++                 !p.getPath().endsWith( "/translations" ) &&
 +                 !p.getPath().endsWith( "/help" ) &&
 +                 !p.getPath().endsWith( "/testing" ) ) {
 +                project.add(p.getDescription());
