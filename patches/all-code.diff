@@ -1,7 +1,7 @@
 diff -ur a/web/menu.jspf b/web/menu.jspf
 --- a/web/menu.jspf	2010-05-11 10:10:08.000000000 +0200
 +++ b/web/menu.jspf	2011-02-17 13:21:20.000000000 +0100
-@@ -70,10 +70,11 @@
+@@ -70,10 +70,13 @@
  function selectAllProjects() {     
       $("#project *").attr("selected","selected");
  }
@@ -12,11 +12,13 @@ diff -ur a/web/menu.jspf b/web/menu.jspf
 -         if ( $(this).attr("selected") ) { $(this).removeAttr("selected") }
 -         else { $(this).attr("selected","true"); }
 +         var value = $(this).attr("value");
-+         if ( value == 'l10n' || value == 'testing' || value == 'help' ) { $(this).removeAttr("selected") }
++         if ( value == 'translation' || value == 'l10n' || value == 'testing' || value == 'help' ) {
++             $(this).removeAttr("selected") 
++         }
       }
      );
  }
-@@ -101,7 +102,7 @@
+@@ -101,7 +104,7 @@
                              <table border="0">
                                  <tbody>
                                      <tr>
