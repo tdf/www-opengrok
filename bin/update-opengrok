@@ -1,26 +1,11 @@
 #!/bin/sh
 
 SRC_ROOT=/srv/git
-REPOS="artwork
-       base
-       bootstrap
-       calc
-       components
-       extensions
-       extras
-       filters
+REPOS="core
+       binfilter
        help
-       impress
-       l10n
-       libs-core
-       libs-extern
-       libs-extern-sys
-       libs-gui
-       postprocess
-       sdk
-       testing
-       ure
-       writer"
+       translations"
+
 BASE_GIT_URL="git://anongit.freedesktop.org/libreoffice/"
 
 for REPO in $REPOS
@@ -38,11 +23,7 @@ export JAVA_HOME=/usr/lib64/jvm/java
 
 # Run opengrok index
 export OPENGROK_INSTANCE_BASE=/var/opengrok
-export IGNORE_PATTERNS="-i binfilter"
 export OPENGROK_REMOTE_REPOS=false
 export SKIN="-L libreoffice"
 export READ_XML_CONFIGURATION=~/opengrok-config.xml
 QUIET="-w /" /usr/local/bin/opengrok index $SRC_ROOT
-
-# Update the fixed bugs log file
-/home/libreoffice/bin/extract-iz $SRC_ROOT >/srv/www/download.go-oo.org/iz/fixed-iz-bugs.log

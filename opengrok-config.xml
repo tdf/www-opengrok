@@ -1,557 +1,134 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<java version="1.6.0" class="java.beans.XMLDecoder"> 
- <object class="org.opensolaris.opengrok.configuration.Configuration"> 
-  <void property="ctags"> 
-   <string>/usr/bin/ctags</string> 
-  </void> 
-  <void property="dataRoot"> 
-   <string>/var/opengrok/data</string> 
-  </void> 
-  <void property="ignoredNames"> 
-   <void property="ignoredPatterns"> 
-    <void method="add"> 
-     <string>binfilter</string> 
-    </void> 
-   </void> 
-  </void> 
-  <void property="projects"> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>artwork</string> 
-     </void> 
-     <void property="path"> 
-      <string>/artwork</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>base</string> 
-     </void> 
-     <void property="path"> 
-      <string>/base</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>bootstrap</string> 
-     </void> 
-     <void property="path"> 
-      <string>/bootstrap</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>calc</string> 
-     </void> 
-     <void property="path"> 
-      <string>/calc</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>components</string> 
-     </void> 
-     <void property="path"> 
-      <string>/components</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>extensions</string> 
-     </void> 
-     <void property="path"> 
-      <string>/extensions</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>extras</string> 
-     </void> 
-     <void property="path"> 
-      <string>/extras</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>filters</string> 
-     </void> 
-     <void property="path"> 
-      <string>/filters</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>help</string> 
-     </void> 
-     <void property="path"> 
-      <string>/help</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>impress</string> 
-     </void> 
-     <void property="path"> 
-      <string>/impress</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>l10n</string> 
-     </void> 
-     <void property="path"> 
-      <string>/l10n</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>libs-core</string> 
-     </void> 
-     <void property="path"> 
-      <string>/libs-core</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>libs-extern</string> 
-     </void> 
-     <void property="path"> 
-      <string>/libs-extern</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>libs-extern-sys</string> 
-     </void> 
-     <void property="path"> 
-      <string>/libs-extern-sys</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>libs-gui</string> 
-     </void> 
-     <void property="path"> 
-      <string>/libs-gui</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>postprocess</string> 
-     </void> 
-     <void property="path"> 
-      <string>/postprocess</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>sdk</string> 
-     </void> 
-     <void property="path"> 
-      <string>/sdk</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>testing</string> 
-     </void> 
-     <void property="path"> 
-      <string>/testing</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>ure</string> 
-     </void> 
-     <void property="path"> 
-      <string>/ure</string> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.configuration.Project"> 
-     <void property="description"> 
-      <string>writer</string> 
-     </void> 
-     <void property="path"> 
-      <string>/writer</string> 
-     </void> 
-    </object> 
-   </void> 
-  </void> 
-  <void property="repositories"> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/artwork</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/base</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/bootstrap</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/calc</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/components</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/extensions</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/extras</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/filters</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/help</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/impress</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/libs-core</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/libs-gui</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/postprocess</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/sdk</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/testing</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/ure</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/writer</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/l10n</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/libs-extern</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-   <void method="add"> 
-    <object class="org.opensolaris.opengrok.history.RepositoryInfo"> 
-     <void property="datePattern"> 
-      <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string> 
-     </void> 
-     <void property="directoryName"> 
-      <string>/srv/git/libs-extern-sys</string> 
-     </void> 
-     <void property="type"> 
-      <string>git</string> 
-     </void> 
-     <void property="working"> 
-      <boolean>true</boolean> 
-     </void> 
-    </object> 
-   </void> 
-  </void> 
-  <void property="sourceRoot"> 
-   <string>/srv/git</string> 
-  </void> 
-  <void property="urlPrefix"> 
-   <string>/s?</string> 
-  </void> 
-  <void property="webappLAF">
-    <string>libreoffice</string>
-  </void>
-  <void property="bugPage">
-    <string>https://bugs.freedesktop.org/show_bug.cgi?id=</string>
-  </void>
-  <void property="bugPattern">
-    <string>(?:fdo#|#fdo)([123456789][0-9]+)</string>
-  </void>
- </object> 
-</java> 
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.6.0" class="java.beans.XMLDecoder">
+  <object class="org.opensolaris.opengrok.configuration.Configuration">
+    <void property="ctags">
+      <string>/usr/bin/ctags</string>
+    </void>
+    <void property="dataRoot">
+      <string>/var/opengrok/data</string>
+    </void>
+    <void property="projects">
+      <void method="add">
+        <object class="org.opensolaris.opengrok.configuration.Project">
+          <void property="description">
+            <string>binfilter</string>
+          </void>
+          <void property="path">
+            <string>/binfilter</string>
+          </void>
+        </object>
+      </void>
+      <void method="add">
+        <object class="org.opensolaris.opengrok.configuration.Project">
+          <void property="description">
+            <string>help</string>
+          </void>
+          <void property="path">
+            <string>/help</string>
+          </void>
+        </object>
+      </void>
+      <void method="add">
+        <object class="org.opensolaris.opengrok.configuration.Project">
+          <void property="description">
+            <string>core</string>
+          </void>
+          <void property="path">
+            <string>/core</string>
+          </void>
+        </object>
+      </void>
+      <void method="add">
+        <object class="org.opensolaris.opengrok.configuration.Project">
+          <void property="description">
+            <string>translations</string>
+          </void>
+          <void property="path">
+            <string>/translations</string>
+          </void>
+        </object>
+      </void>
+    </void>
+    <void property="repositories">
+      <void method="add">
+        <object class="org.opensolaris.opengrok.history.RepositoryInfo">
+          <void property="datePattern">
+            <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
+          </void>
+          <void property="directoryName">
+            <string>/srv/git/binfilter</string>
+          </void>
+          <void property="type">
+            <string>git</string>
+          </void>
+          <void property="working">
+            <boolean>true</boolean>
+          </void>
+        </object>
+      </void>
+      <void method="add">
+        <object class="org.opensolaris.opengrok.history.RepositoryInfo">
+          <void property="datePattern">
+            <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
+          </void>
+          <void property="directoryName">
+            <string>/srv/git/help</string>
+          </void>
+          <void property="type">
+            <string>git</string>
+          </void>
+          <void property="working">
+            <boolean>true</boolean>
+          </void>
+        </object>
+      </void>
+      <void method="add">
+        <object class="org.opensolaris.opengrok.history.RepositoryInfo">
+          <void property="datePattern">
+            <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
+          </void>
+          <void property="directoryName">
+            <string>/srv/git/core</string>
+          </void>
+          <void property="type">
+            <string>git</string>
+          </void>
+          <void property="working">
+            <boolean>true</boolean>
+          </void>
+        </object>
+      </void>
+      <void method="add">
+        <object class="org.opensolaris.opengrok.history.RepositoryInfo">
+          <void property="datePattern">
+            <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
+          </void>
+          <void property="directoryName">
+            <string>/srv/git/translations</string>
+          </void>
+          <void property="type">
+            <string>git</string>
+          </void>
+          <void property="working">
+            <boolean>true</boolean>
+          </void>
+        </object>
+      </void>
+    </void>
+    <void property="sourceRoot">
+      <string>/srv/git</string>
+    </void>
+    <void property="urlPrefix">
+      <string>/s?</string>
+    </void>
+    <void property="webappLAF">
+      <string>libreoffice</string>
+    </void>
+    <void property="bugPage">
+      <string>https://bugs.freedesktop.org/show_bug.cgi?id=</string>
+    </void>
+    <void property="bugPattern">
+      <string>(?:fdo#|#fdo)([123456789][0-9]+)</string>
+    </void>
+  </object>
+</java>
