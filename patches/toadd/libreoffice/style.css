@@ -215,3 +215,18 @@ strike.d{background-color:#bbddbb; margin-right:.2em;padding-left:1em;padding-ri
 
 span.blame { }
 span.blame-hidden { display: none }
+
+
+/* Remote Styles */
+
+body#remote {
+    background:transparent !important
+}
+
+body#remote #page {
+    width:100% !important
+}
+
+body#remote #header, body#remote #Masthead, body#remote #menu, body#remote #Footer {
+    display:none !important
+}

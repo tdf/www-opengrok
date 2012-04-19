@@ -1,0 +1,29 @@
+--- a/web/search.jsp	2012-04-17 17:18:14.147097100 +0100
++++ b/web/search.jsp	2012-04-17 17:12:42.679094963 +0100
+@@ -46,11 +46,12 @@
+ org.apache.lucene.queryParser.*"
+ %><%@ page session="false" %><%@ page errorPage="error.jsp" %><%
+ Date starttime = new Date();
+-String q    = request.getParameter("q");
+-String defs = request.getParameter("defs");
+-String refs = request.getParameter("refs");
+-String hist = request.getParameter("hist");
+-String path = request.getParameter("path");
++String remote   = request.getParameter("remote");
++String q        = request.getParameter("q");
++String defs     = request.getParameter("defs");
++String refs     = request.getParameter("refs");
++String hist     = request.getParameter("hist");
++String path     = request.getParameter("path");
+ 
+ %><%@ include file="projects.jspf" %><%
+ String sort = null;
+@@ -266,7 +267,7 @@
+          RuntimeEnvironment environment = RuntimeEnvironment.getInstance();
+          environment.register();
+ 	    %><%@ include file="httpheader.jspf" %>
+-<body>
++<body <% if( remote != null && remote.equals("true") ) { %> id="remote" <% } %> >
+ <div id="page">
+     <div id="header"><%@ include file="pageheader.jspf" %></div>
+ <div id="Masthead"></div>
