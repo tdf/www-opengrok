@@ -1,6 +1,6 @@
 --- a/web/search.jsp	2012-04-17 17:18:14.147097100 +0100
 +++ b/web/search.jsp	2012-04-17 17:12:42.679094963 +0100
-@@ -46,11 +46,12 @@
+@@ -48,11 +48,12 @@
  org.apache.lucene.queryParser.*"
  %><%@ page session="false" %><%@ page errorPage="error.jsp" %><%
  Date starttime = new Date();
@@ -18,7 +18,7 @@
  
  %><%@ include file="projects.jspf" %><%
  String sort = null;
-@@ -266,7 +267,7 @@
+@@ -269,7 +270,7 @@
           RuntimeEnvironment environment = RuntimeEnvironment.getInstance();
           environment.register();
  	    %><%@ include file="httpheader.jspf" %>
@@ -27,3 +27,13 @@
  <div id="page">
      <div id="header"><%@ include file="pageheader.jspf" %></div>
  <div id="Masthead"></div>
+@@ -425,7 +426,8 @@
+                             (refs == null ? "" : "&amp;refs=" + Util.URIEncode(refs)) +
+                             (path == null ? "" : "&amp;path=" + Util.URIEncode(path)) +
+                             (hist == null ? "" : "&amp;hist=" + Util.URIEncode(hist)) +
+-                            (sort == null ? "" : "&amp;sort=" + Util.URIEncode(sort));
++                            (sort == null ? "" : "&amp;sort=" + Util.URIEncode(sort)) +
++                            (remote == null ? "" : "&amp;remote=" + Util.URIEncode(remote));
+                     if (hasProjects) {
+                         urlp = urlp + "&amp;project=";
+                         for (Iterator it = project.iterator(); it.hasNext();) {
