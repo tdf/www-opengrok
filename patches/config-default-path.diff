@@ -1,0 +1,13 @@
+diff --git a/web/WEB-INF/web.xml b/web/WEB-INF/web.xml
+index 99d87c7..0025c8f 100644
+--- a/web/WEB-INF/web.xml
++++ b/web/WEB-INF/web.xml
+@@ -5,7 +5,7 @@
+   <description>A wicked fast source browser</description>
+   <context-param>
+     <param-name>CONFIGURATION</param-name>
+-    <param-value>/var/opengrok/etc/configuration.xml</param-value>
++    <param-value>/srv/opengrok/etc/configuration.xml</param-value>
+     <description>Full path to the configuration file where OpenGrok can read it's configuration</description>
+   </context-param>
+   

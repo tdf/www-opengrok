@@ -5,19 +5,9 @@
       <string>/usr/bin/ctags</string>
     </void>
     <void property="dataRoot">
-      <string>/var/opengrok/data</string>
+      <string>/srv/opengrok/data</string>
     </void>
     <void property="projects">
-      <void method="add">
-        <object class="org.opensolaris.opengrok.configuration.Project">
-          <void property="description">
-            <string>binfilter</string>
-          </void>
-          <void property="path">
-            <string>/binfilter</string>
-          </void>
-        </object>
-      </void>
       <void method="add">
         <object class="org.opensolaris.opengrok.configuration.Project">
           <void property="description">
@@ -56,7 +46,7 @@
             <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
           </void>
           <void property="directoryName">
-            <string>/srv/git/binfilter</string>
+            <string>/srv/opengrok/src/help</string>
           </void>
           <void property="type">
             <string>git</string>
@@ -72,7 +62,7 @@
             <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
           </void>
           <void property="directoryName">
-            <string>/srv/git/help</string>
+            <string>/srv/opengrok/src/core</string>
           </void>
           <void property="type">
             <string>git</string>
@@ -88,23 +78,7 @@
             <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
           </void>
           <void property="directoryName">
-            <string>/srv/git/core</string>
-          </void>
-          <void property="type">
-            <string>git</string>
-          </void>
-          <void property="working">
-            <boolean>true</boolean>
-          </void>
-        </object>
-      </void>
-      <void method="add">
-        <object class="org.opensolaris.opengrok.history.RepositoryInfo">
-          <void property="datePattern">
-            <string>EEE MMM dd hh:mm:ss yyyy ZZZZ</string>
-          </void>
-          <void property="directoryName">
-            <string>/srv/git/translations</string>
+            <string>/srv/opengrok/src/translations</string>
           </void>
           <void property="type">
             <string>git</string>
@@ -116,7 +90,7 @@
       </void>
     </void>
     <void property="sourceRoot">
-      <string>/srv/git</string>
+      <string>/srv/opengrok/src/</string>
     </void>
     <void property="urlPrefix">
       <string>/s?</string>

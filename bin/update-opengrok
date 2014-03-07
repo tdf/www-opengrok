@@ -1,8 +1,7 @@
 #!/bin/sh
 
-SRC_ROOT=/srv/git
+SRC_ROOT=/srv/opengrok/src
 REPOS="core
-       binfilter
        help
        translations"
 
@@ -22,8 +21,8 @@ done
 export JAVA_HOME=/usr/lib64/jvm/java
 
 # Run opengrok index
-export OPENGROK_INSTANCE_BASE=/var/opengrok
+export OPENGROK_INSTANCE_BASE=/srv/opengrok
 export OPENGROK_REMOTE_REPOS=false
 export SKIN="-L libreoffice"
 export READ_XML_CONFIGURATION=~/opengrok-config.xml
-QUIET="-w /" /usr/local/bin/opengrok index $SRC_ROOT
+QUIET="-w /" /usr/local/bin/opengrok index
